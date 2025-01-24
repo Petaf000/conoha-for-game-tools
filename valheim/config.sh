@@ -159,7 +159,7 @@ function add_admin() {
 function download_bepinex() {
     install_package libxml2-utils
     bepinex_url=$(curl -so- https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/ \
-        | xmllint --xpath '//a[contains(@href,"https://thunderstore.io/package/download/denikson/BepInExPack_Valheim/")]/@href'  --html - 2> /dev/null \
+        | xmllint --xpath '//a[contains(@href,"https://thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.2202/")]/@href'  --html - 2> /dev/null \
         | grep 'href=' \
         | head -1 \
         | sed 's/[^"]*"\([^"]*\)"[^"]*/\1/g' )
